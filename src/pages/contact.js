@@ -2,8 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const IndexPage = ({ data: { kdccmsPages } }) => {
   const { title, subtitle, formMessage, backgroundImage } = kdccmsPages
@@ -13,6 +12,7 @@ const IndexPage = ({ data: { kdccmsPages } }) => {
       subtitle={subtitle}
       background={backgroundImage.childImageSharp.fluid}
     >
+      <SEO title={`${title} || Gatsby Blog`} />
       <div className="row">
         <div className="col-lg-8 col-md-10 mx-auto">
           <div dangerouslySetInnerHTML={{ __html: formMessage }} />

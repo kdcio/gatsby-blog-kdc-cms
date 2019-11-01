@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const BlogPost = ({ data: { kdccmsBlog } }) => {
   const {
@@ -27,6 +27,7 @@ const BlogPost = ({ data: { kdccmsBlog } }) => {
       meta={meta}
       background={backgroundImage.childImageSharp.fluid}
     >
+      <SEO title={`${title} || Gatsby Blog`} />
       <div className="row">
         <div
           className="col-lg-8 col-md-10 mx-auto"

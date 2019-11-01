@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import BlogsList from "../components/blogList"
-// import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const IndexPage = ({ data: { kdccmsPages } }) => {
   const { title, subtitle, backgroundImage } = kdccmsPages
@@ -13,6 +13,7 @@ const IndexPage = ({ data: { kdccmsPages } }) => {
       subtitle={subtitle}
       background={backgroundImage.childImageSharp.fluid}
     >
+      <SEO title={`${title} || Gatsby Blog`} />
       <div className="row">
         <div className="col-lg-8 col-md-10 mx-auto">
           <BlogsList />
