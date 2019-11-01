@@ -1,4 +1,5 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const footer = () => {
   return (
@@ -10,24 +11,33 @@ const footer = () => {
               <li className="list-inline-item">
                 <a href="#top">
                   <span className="fa-stack fa-lg">
-                    <i className="fas fa-circle fa-stack-2x"></i>
-                    <i className="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    <FontAwesomeIcon icon="circle" className="fa-stack-2x" />
+                    <FontAwesomeIcon
+                      icon={["fab", "twitter"]}
+                      className="fa-stack-1x fa-inverse"
+                    />
                   </span>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#top">
                   <span className="fa-stack fa-lg">
-                    <i className="fas fa-circle fa-stack-2x"></i>
-                    <i className="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                    <FontAwesomeIcon icon="circle" className="fa-stack-2x" />
+                    <FontAwesomeIcon
+                      icon={["fab", "facebook-f"]}
+                      className="fa-stack-1x fa-inverse"
+                    />
                   </span>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#top">
                   <span className="fa-stack fa-lg">
-                    <i className="fas fa-circle fa-stack-2x"></i>
-                    <i className="fab fa-github fa-stack-1x fa-inverse"></i>
+                    <FontAwesomeIcon icon="circle" className="fa-stack-2x" />
+                    <FontAwesomeIcon
+                      icon={["fab", "github"]}
+                      className="fa-stack-1x fa-inverse"
+                    />
                   </span>
                 </a>
               </li>
