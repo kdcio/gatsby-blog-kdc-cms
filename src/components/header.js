@@ -2,15 +2,15 @@ import PropTypes from "prop-types"
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
 
-const Header = ({ background, siteTitle }) => (
+const Header = ({ background, title, subtitle }) => (
   <BackgroundImage Tag="header" className="masthead" fluid={background}>
     <div className="overlay"></div>
     <div className="container">
       <div className="row">
         <div className="col-lg-8 col-md-10 mx-auto">
           <div className="site-heading">
-            <h1>{siteTitle}</h1>
-            <span className="subheading">A Blog Theme by Start Bootstrap</span>
+            <h1>{title}</h1>
+            <span className="subheading">{subtitle}</span>
           </div>
         </div>
       </div>
@@ -19,12 +19,14 @@ const Header = ({ background, siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
   background: PropTypes.object,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  title: ``,
+  subtitle: ``,
 }
 
 export default Header

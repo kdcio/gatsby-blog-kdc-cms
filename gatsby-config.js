@@ -33,6 +33,15 @@ module.exports = {
         precision: 8,
       },
     },
+    {
+      resolve: `gatsby-source-kdc-cms`,
+      options: {
+        apiURL: `http://localhost:8101`,
+        queryLimit: 100, // Default to 100
+        contentTypes: ["pages", `blog`],
+        jwtToken: "",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -7,30 +7,16 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Navigation from "./navigation"
 import Footer from "./footer"
 import "../scss/clean-blog.scss"
 
-const Layout = ({ background, children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = ({ title, subtitle, background, children }) => {
   return (
     <>
-      <Header
-        siteTitle={data.site.siteMetadata.title}
-        background={background}
-      />
+      <Header title={title} subtitle={subtitle} background={background} />
       <Navigation />
       <div className="container">{children}</div>
       <hr />
@@ -40,6 +26,9 @@ const Layout = ({ background, children }) => {
 }
 
 Layout.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  background: PropTypes.object.isRequired,
   children: PropTypes.node.isRequired,
 }
 

@@ -8,9 +8,9 @@ const Navigation = () => {
       id="mainNav"
     >
       <div className="container">
-        <a className="navbar-brand" href="index.html">
+        <Link className="navbar-brand" to="/">
           Start Bootstrap
-        </a>
+        </Link>
         <button className="navbar-toggler navbar-toggler-right" type="button">
           Menu
           <i className="fas fa-bars"></i>
