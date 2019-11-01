@@ -19,7 +19,7 @@
     "gatsby-plugin-sass": "^2.1.20",
     "gatsby-plugin-sharp": "^2.2.34",
     "gatsby-source-filesystem": "^2.1.35",
-    "gatsby-source-kdc-cms": "^0.1.0",
+    "gatsby-source-kdc-cms": "^0.1.1",
     "gatsby-transformer-sharp": "^2.3.1",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
@@ -28,6 +28,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -45,7 +46,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
