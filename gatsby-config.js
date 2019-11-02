@@ -32,10 +32,10 @@ module.exports = {
     {
       resolve: `gatsby-source-kdc-cms`,
       options: {
-        apiURL: `http://localhost:8101`,
+        apiURL: process.env.KDC_CMS_API,
         queryLimit: 100, // Default to 100
         contentTypes: ["pages", `blog`],
-        jwtToken: "",
+        jwtToken: process.env.KDC_CMS_TOKEN,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
