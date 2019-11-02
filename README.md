@@ -4,7 +4,7 @@ An example blog site that is built with [Gatsby](https://www.gatsbyjs.org/) and 
 
 This website uses [gatsby-source-kdc-cms](https://github.com/ianpogi5/gatsby-source-kdc-cms)
 
-[Demo website](https://ianpogi5.github.io/gatsby-blog-kdc-cms/)
+[Live Demo website](https://gatsby-blog-kdc-cms.netlify.com/)
 
 Detailed instruction coming soon...
 
