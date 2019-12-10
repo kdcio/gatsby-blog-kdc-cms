@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 
 const BlogsList = ({ data }) => {
-  const { edges: posts } = data.allKdccmsBlog
+  const { edges: posts } = data.allKdccmsContentsBlog
 
   return (
     <div>
@@ -40,7 +40,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query BlogsListQuery {
-        allKdccmsBlog(sort: { fields: publishDate, order: DESC }) {
+        allKdccmsContentsBlog(sort: { fields: publishDate, order: DESC }) {
           edges {
             node {
               title

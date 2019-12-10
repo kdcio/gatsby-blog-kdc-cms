@@ -5,7 +5,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allKdccmsBlog(limit: 1000) {
+      allKdccmsContentsBlog(limit: 1000) {
         edges {
           node {
             slug
@@ -19,7 +19,7 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allKdccmsBlog.edges
+    const posts = result.data.allKdccmsContentsBlog.edges
 
     posts.forEach(edge => {
       const slug = edge.node.slug

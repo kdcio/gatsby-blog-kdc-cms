@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogPost = ({ data: { kdccmsBlog } }) => {
+const BlogPost = ({ data: { kdccmsContentsBlog } }) => {
   const {
     title,
     subtitle,
@@ -13,7 +13,7 @@ const BlogPost = ({ data: { kdccmsBlog } }) => {
     publishDate,
     body,
     backgroundImage,
-  } = kdccmsBlog
+  } = kdccmsContentsBlog
   const meta = (
     <span>
       Posted by <a href="#top">{author}</a> on {publishDate}
@@ -41,7 +41,7 @@ const BlogPost = ({ data: { kdccmsBlog } }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    kdccmsBlog: PropTypes.object,
+    kdccmsContentsBlog: PropTypes.object,
   }),
 }
 
@@ -49,7 +49,7 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($slug: String!) {
-    kdccmsBlog(slug: { eq: $slug }) {
+    kdccmsContentsBlog(slug: { eq: $slug }) {
       title
       subtitle
       author
