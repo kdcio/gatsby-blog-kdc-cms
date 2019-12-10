@@ -34,7 +34,7 @@ module.exports = {
       options: {
         apiURL: process.env.KDC_CMS_API,
         queryLimit: 100, // Default to 100
-        contentTypes: ["pages", `blog`],
+        contentTypes: ["pages", `contents/blog`],
         jwtToken: process.env.KDC_CMS_TOKEN,
       },
     },
