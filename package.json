@@ -10,7 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "bootstrap": "^4.4.1",
-    "gatsby": "^2.18.8",
+    "gatsby": "^2.23.20",
     "gatsby-background-image": "^0.8.19",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-manifest": "^2.2.31",
@@ -21,11 +21,12 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-source-kdc-cms": "^0.1.4",
     "gatsby-transformer-sharp": "^2.3.7",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "snyk": "^1.413.3"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",
@@ -46,7 +47,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -54,5 +57,6 @@
   },
   "bugs": {
     "url": "https://github.com/gatsby-blog-kdc-cms/issues"
-  }
+  },
+  "snyk": true
 }
